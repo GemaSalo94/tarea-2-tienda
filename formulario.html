@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitud de información</title>
+    <link rel="stylesheet" href="estilosform.css">
+</head>
+<body>
+    <h1>Formulario de información</h1>
+    <form action="formulario.php" method="post">
+    <fieldset>
+        <legend>Sus Datos</legend>
+    
+        <p>
+            <label for="nombre">Nombre y apellidos:</label>
+            <input type="text" maxlength="50" name="nombre" id="nombre" autofocus>
+        </p>
+        <p>
+            <label for="contraseña">Contraseña </label>
+            <input type="password" maxlength="8" name="contraseña" id="contraseña">
+        </p>
+        <p>
+            <label for="usuario">Usuario:</label>
+            <input type="text" maxlength="50" name="usuario"  id="usuario" value="anónimo" disabled>
+        </p>
+       <p>
+        Nivel:
+       </p>
+       <p>
+        <input type="radio" value="P" id="principiante" name="nivel" >
+        <label for="principiante">Principiante</label> 
+       </p>
+        <p>
+        <input type="radio" value="I" id="intermedio" name="nivel">
+        <label for="intermedio"> Intermedio</label>
+       </p>
+        <p>
+        <input type="radio" value="A" id="avanzado" name="nivel" checked>
+        <label for="avanzado"> Avanzado</label>
+       </p>
+    </fieldset>
+    <p>
+    <label for="nacionalidad">Nacionalidad</label>
+    <select name="nacionalidad" id="nacionalidad">
+        <option value="esp">España</option>
+        <option value="otro">Otro</option>
+    </select>
+    </p>
+    <p>
+        <label for="descripcion">Descripción:</label>
+        <textarea name="descripcion" id="descripcion" cols="30" rows="4"></textarea>
+    </p>
+    <p>
+        <input type="checkbox" name="newsletter" id="newsletter" checked>
+        <label for="newsletter"> Deseo recibir información sobre novedades y ofertas</label>
+    </p>
+    <p>
+        <input type="checkbox" name="normativa" id="normativa" required>
+        <label for="normativa"> Declaro haber leido y aceptar las condiciones generales del programa y la normativa sobre protección de datos</label>
+    </p>
+    <p>
+        <label for="archivo">Adjuntar foto:</label>
+        <input type="file" name="archivo" id="archivo">
+    </p>
+    <p>
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Borrar Datos">
+    </p>
+</form>
+</body>
+</html>
